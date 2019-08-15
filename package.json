@@ -12,7 +12,8 @@
     "angular 8",
     "electron",
     "typescript",
-    "sass"
+    "sass",
+    "electron-edge-js"
   ],
   "main": "main.js",
   "private": true,
