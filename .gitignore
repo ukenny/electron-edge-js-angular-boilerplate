@@ -12,6 +12,7 @@ src/**/*.js
 *.js.map
 
 # C-Sharp Files
+/c_sharp_files/QuickStart/.vs/*
 /c_sharp_files/QuickStart/packages/*
 /c_sharp_files/QuickStart/QuickStart/bin/*
 /c_sharp_files/QuickStart/QuickStart/obj/*
