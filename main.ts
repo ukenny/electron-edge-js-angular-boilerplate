@@ -6,6 +6,14 @@ let win, serve;
 const args = process.argv.slice(1);
 serve = args.some(val => val === '--serve');
 
+process.env.EDGE_APP_ROOT = './c_sharp_files/QuickStart';
+
+// Global Variables
+const globalAny: any = global;
+globalAny.fs = require('fs');
+globalAny.edge = require('electron-edge-js');
+
+
 function createWindow() {
 
   const electronScreen = screen;
@@ -19,7 +27,8 @@ function createWindow() {
     height: size.height,
     webPreferences: {
       nodeIntegration: true,
-    },
+      nodeIntegrationInWorker: true
+    }
   });
 
   if (serve) {
